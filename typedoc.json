@@ -1,0 +1,13 @@
+{
+  "inputFiles": [
+    "src/"
+  ],
+  "exclude": [
+    "**/*.spec.ts"
+  ],
+  "excludePrivate": true,
+  "excludeNotExported": true,
+  "target": "ES6",
+  "mode": "file",
+  "out": "docs"
+}

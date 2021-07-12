@@ -1,0 +1,14 @@
+node_modules
+test
+src/**.js
+.idea/*
+
+coverage
+.nyc_output
+*.log
+
+.env
+.DS_Store
+
+package-lock.json
+/test.js
