@@ -6,15 +6,9 @@ import { SessionResponse } from '../models/session';
 export declare class PayService {
     constructor();
     /**
-     * Create a XS2A.Pay Request
-     *
-     * ### Example
-     * ```js
-     * import { XS2A } from 'xs2a-nodejs';
-     *
-     * const client = new XS2A('your-api-key');
-     * const riskRequest = await client.pay.create({ ... });
-     * ```
+     * Create a Pay Session
+     * @param {PayRequest} request The Pay Request
+     * @returns {Promise<SessionResponse>}
      */
     create(request: PayRequest): Promise<SessionResponse>;
     /**

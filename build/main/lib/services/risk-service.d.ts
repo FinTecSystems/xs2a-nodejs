@@ -6,15 +6,9 @@ import { SessionResponse } from '../models/session';
 export declare class RiskService {
     constructor();
     /**
-     * Create a xs2a.risk object and receive a wizard session key in return.
-     *
-     * ### Example
-     * ```js
-     * import { XS2A } from 'xs2a-nodejs';
-     *
-     * const client = new XS2A('your-api-key');
-     * const riskRequest = await client.risk.create();
-     * ```
+     * Create a Risk Session
+     * @param {RiskRequest} request The Risk Request
+     * @returns {Promise<SessionResponse>}
      */
     create(request?: RiskRequest): Promise<SessionResponse>;
     /**
