@@ -26,7 +26,7 @@
     "test": "run-s build test:*",
     "test:unit": "nyc --silent ava",
     "watch": "run-s clean build:main && run-p \"build:main -- -w\" \"test:unit -- --watch\"",
-    "doc": "run-s doc:html && opn build/docs/index.html",
+    "doc": "run-s doc:html",
     "doc:html": "typedoc --options typedoc.json",
     "clean": "trash build test"
   },
