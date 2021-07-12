@@ -1,0 +1,24 @@
+{
+	"extends": [
+		"tslint:latest"
+	],
+	"rules": {
+		"indent": [true, "tabs", 2],
+		"no-empty-interface": false,
+		"interface-name": [
+			true,
+			"never-prefix"
+		],
+		"no-implicit-dependencies": [
+			true,
+			"dev"
+		],
+		"no-var-keyword": true,
+		"typedef": [
+			true,
+			"call-signature"
+		],
+		"no-empty": false,
+		"ordered-imports": false
+	}
+}
