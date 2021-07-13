@@ -2,7 +2,9 @@
 
 The official Node.js API wrapper for the FinTecSystems XS2A API. Written in Typescript with intellisense support and autocompletion.
 
-[Documentation (Typedocs)](https://docs.fintecsystems.com/xs2a-nodejs)
+- [Documentation (Typedocs)](https://docs.fintecsystems.com/xs2a-nodejs)
+- [Full REST-API Reference](https://docs.fintecsystems.com/swagger)
+- [Get an API-Key](https://fintecsystems.com/en/developer/)
 
 ### Get Started
 
@@ -15,6 +17,25 @@ import { XS2A } from '@fintecsystems/xs2a-node';
 // or const { XS2A } = require('@fintecsystems/xs2a-node');
 
 const xs2a = new XS2A('your-api-key');
+```
+
+#### Usage Example
+Every method returns a promise that you can await. In case of errors (responses with a
+status code >= 400) the promise will be rejected and you are given the response body in the error.
+
+```js
+try {
+	const riskSession = await xs2a.Risk.create({
+		// (optional) session parameters ...
+	});
+
+	// Use with e.g. xs2a.js
+	const wizardSessionKey = riskSession.wizard_session_key;
+	// Store for later reference
+	const transactionId = riskSession.transaction;
+} catch (error) {
+	console.log(error.status, error.message);
+}
 ```
 
 ### Available Methods
