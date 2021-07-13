@@ -12,7 +12,7 @@ npm i @fintecsystems/xs2a-node --save
 
 ```js
 import { XS2A } from '@fintecsystems/xs2a-node';
-// or const { XS2A } = require('xs2a-node');
+// or const { XS2A } = require('@fintecsystems/xs2a-node');
 
 const xs2a = new XS2A('your-api-key');
 ```
