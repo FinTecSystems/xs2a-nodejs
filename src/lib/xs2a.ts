@@ -22,6 +22,8 @@ export class XS2A {
 	constructor(private apiKey: string, url = API_BASE_URL) {
 		axios.defaults.headers.common.Authorization = `Basic ${Buffer.from(`api:${this.apiKey}`).toString('base64')}`;
 		axios.defaults.headers.common['Content-Type'] = 'application/json';
+		axios.defaults.headers.common['X-Client'] = 'xs2a-node';
+		axios.defaults.headers.common['X-Client-Version'] = '1.0.3';
 		axios.defaults.baseURL = url;
 
 		this.Risk = new RiskService();

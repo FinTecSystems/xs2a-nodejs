@@ -10,20 +10,21 @@ export declare class BankConnectionsService {
     create(request?: BankConnectionRequest): Promise<SessionResponse>;
     /**
      * Get a list of all bank connections for a xs2a.api bank user
-     * @param perPage Items per page
-     * @param page page to display
+     * @param {number} perPage Items per page
+     * @param {number} page page to display
      * @returns {Promise<BankConnectionList>}
      */
     list(perPage?: number, page?: number): Promise<BankConnectionList>;
     /**
      * Get a specific Bank Connection
-     * @param connectionId The connection-id for the connection to be retrieved. You can also pass transaction id here, which you get when you create a bank connection.
+     * @param {string} connectionId The connection-id for the connection to be retrieved. You can also pass transaction id here, which you get when you create a bank connection.
      * @returns {Promise<BankConnection>}
      */
     get(connectionId: string): Promise<BankConnection>;
     /**
      * Delete a specific Bank Connection
-     * @param connectionId The connection-id for the connection to be deleted.
+     * @param {string} connectionId The connection-id for the connection to be deleted.
+     * @return {Promise<any>}
      */
     delete(connectionId: string): Promise<any>;
     /**

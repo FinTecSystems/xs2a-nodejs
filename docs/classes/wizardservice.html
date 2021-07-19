@@ -103,7 +103,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/FinTecSystems/xs2a-nodejs/blob/bb40918/src/lib/services/wizard-service.ts#L4">lib/services/wizard-service.ts:4</a></li>
+									<li>Defined in <a href="https://github.com/FinTecSystems/xs2a-nodejs/blob/fbc3bb7/src/lib/services/wizard-service.ts#L4">lib/services/wizard-service.ts:4</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <a href="wizardservice.html" class="tsd-signature-type">WizardService</a></h4>
@@ -117,22 +117,31 @@
 					<a name="navigate" class="tsd-anchor"></a>
 					<h3>navigate</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">navigate<span class="tsd-signature-symbol">(</span>request<span class="tsd-signature-symbol">: </span><a href="../interfaces/wizardapirequest.html" class="tsd-signature-type">WizardApiRequest</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/wizardresponse.html" class="tsd-signature-type">WizardResponse</a><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">navigate<span class="tsd-signature-symbol">(</span>request<span class="tsd-signature-symbol">: </span><a href="../interfaces/wizardapirequest.html" class="tsd-signature-type">WizardApiRequest</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/wizardresponse.html" class="tsd-signature-type">WizardResponse</a><span class="tsd-signature-symbol"> | </span><a href="../interfaces/wizardfinalresponse.html" class="tsd-signature-type">WizardFinalResponse</a><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/FinTecSystems/xs2a-nodejs/blob/bb40918/src/lib/services/wizard-service.ts#L7">lib/services/wizard-service.ts:7</a></li>
+									<li>Defined in <a href="https://github.com/FinTecSystems/xs2a-nodejs/blob/fbc3bb7/src/lib/services/wizard-service.ts#L12">lib/services/wizard-service.ts:12</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Navigate the Wizard</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>request: <a href="../interfaces/wizardapirequest.html" class="tsd-signature-type">WizardApiRequest</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The wizard request to send</p>
+									</div>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/wizardresponse.html" class="tsd-signature-type">WizardResponse</a><span class="tsd-signature-symbol">&gt;</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/wizardresponse.html" class="tsd-signature-type">WizardResponse</a><span class="tsd-signature-symbol"> | </span><a href="../interfaces/wizardfinalresponse.html" class="tsd-signature-type">WizardFinalResponse</a><span class="tsd-signature-symbol">&gt;</span></h4>
+							<p>Either another WizardResponse (step) or the final response</p>
 						</li>
 					</ul>
 				</section>

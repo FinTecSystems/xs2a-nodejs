@@ -4,6 +4,11 @@ import { WizardApiRequest, WizardFinalResponse, WizardResponse } from '../models
 export class APIWizardService {
 	constructor() {}
 
+	/**
+	 * Navigate the Wizard from within a Bank Users Scope
+	 * @param {WizardApiRequest} request The wizard request to send
+	 * @returns {Promise<WizardResponse | WizardFinalResponse>} Either another WizardResponse (step) or the final response
+	 */
 	public navigate(request: WizardApiRequest): Promise<WizardResponse | WizardFinalResponse> {
 		return new Promise((resolve, reject) => {
 			axios

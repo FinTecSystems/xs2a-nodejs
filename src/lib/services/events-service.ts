@@ -7,7 +7,8 @@ export class EventsService {
 	/**
 	 * An event is basically the API representation of a webhook. Every webhook you receive fires an event, that you can process further.
 	 * @summary Get all events for a xs2a transaction object
-	 * @returns {Promise<WizardSessionObject>}
+	 * @param {EventsQueryParameters} [parameters={}] (Optional) Filter Parameters
+	 * @returns {Promise<EventsList>}
 	 */
 	public getAll(parameters: EventsQueryParameters = {}): Promise<EventsList> {
 		return new Promise((resolve, reject) => {

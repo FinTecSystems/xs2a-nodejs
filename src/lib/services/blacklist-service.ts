@@ -24,7 +24,7 @@ export class BlacklistService {
 
 	/**
 	 * Get the details about a blacklist item
-	 * @param id id of entry to get
+	 * @param {string} id id of entry to get
 	 * @returns {Promise<BlacklistObject>}
 	 */
 	public get(id: string): Promise<BlacklistObject> {
@@ -42,7 +42,7 @@ export class BlacklistService {
 
 	/**
 	 * Remove an entry from the blacklist
-	 * @param id id of entry to remove
+	 * @param {string} id id of entry to remove
 	 * @returns {Promise<BlacklistObject>}
 	 */
 	public delete(id: string): Promise<BlacklistObject> {

@@ -9,13 +9,13 @@ export declare class BlacklistService {
     add(entry: BlacklistAdd): Promise<BlacklistObject>;
     /**
      * Get the details about a blacklist item
-     * @param id id of entry to get
+     * @param {string} id id of entry to get
      * @returns {Promise<BlacklistObject>}
      */
     get(id: string): Promise<BlacklistObject>;
     /**
      * Remove an entry from the blacklist
-     * @param id id of entry to remove
+     * @param {string} id id of entry to remove
      * @returns {Promise<BlacklistObject>}
      */
     delete(id: string): Promise<BlacklistObject>;

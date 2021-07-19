@@ -6,8 +6,8 @@ export class BankUserService {
 
 	/**
 	 * Get a list of all xs2a.api bank users
-	 * @param perPage Items per page
-	 * @param page page to display
+	 * @param {number} perPage Items per page
+	 * @param {number} page page to display
 	 * @returns {Promise<BankUserList>}
 	 */
 	public list(perPage: number = 15, page: number = 1): Promise<BankUserList> {
@@ -31,6 +31,7 @@ export class BankUserService {
 	/**
 	 * Create a xs2a.api bank user
 	 * @param {BankUserRequest} request
+	 * @returns {Promise<BankUser>}
 	 */
 	public create(request: BankUserRequest): Promise<BankUser> {
 		return new Promise((resolve, reject) => {
@@ -46,7 +47,9 @@ export class BankUserService {
 	}
 
 	/**
-	 * Create a xs2a.api bank user by user-id
+	 * Get a xs2a.api bank user by user-id
+	 * @param {string} userId id of user to be retrieved
+	 * @returns {Promise<BankUser>}
 	 */
 	public get(userId: string): Promise<BankUser> {
 		return new Promise((resolve, reject) => {
@@ -63,6 +66,8 @@ export class BankUserService {
 
 	/**
 	 * Delete a xs2a.api bank user by user-id
+	 * @param {string} userId id of user to be retrieved
+	 * @return {Promise<any>}
 	 */
 	public delete(userId: string): Promise<any> {
 		return new Promise((resolve, reject) => {
@@ -102,6 +107,7 @@ export class BankUserService {
 	/**
 	 * Get a list of accesstokens for a xs2a.api bank user
 	 * @param {string} userId The user-id for the user to retrieve all accesstoken for.
+	 * @returns {Promise<BankUserAccessTokenList>}
 	 */
 	public listAccessTokens(userId: string): Promise<BankUserAccessTokenList> {
 		return new Promise((resolve, reject) => {
@@ -120,6 +126,7 @@ export class BankUserService {
 	 * Get a specific accesstoken for a xs2a.api bank user
 	 * @param {string} userId The user-id for the user to retrieve a specific accesstoken for.
 	 * @param {string} tokenId ID of the accesstoken to get.
+	 * @returns {Promise<BankUserAccessToken>}
 	 */
 	public getAccessToken(userId: string, tokenId: string): Promise<BankUserAccessToken> {
 		return new Promise((resolve, reject) => {
@@ -160,6 +167,7 @@ export class BankUserService {
 	 * Delete an accesstoken
 	 * @param {string} userId The user-id for the user to delete a specific accesstoken for.
 	 * @param {string} tokenId ID of the accesstoken to delete.
+	 * @return {Promise<any>}
 	 */
 	public deleteAccessToken(userId: string, tokenId: string): Promise<any> {
 		return new Promise((resolve, reject) => {

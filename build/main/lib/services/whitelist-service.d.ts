@@ -9,13 +9,13 @@ export declare class WhitelistService {
     add(entry: WhitelistAdd): Promise<WhitelistObject>;
     /**
      * Get the details about a whitelist item
-     * @param id id of entry to get
+     * @param {string} id id of entry to get
      * @returns {Promise<WhitelistObject>}
      */
     get(id: string): Promise<WhitelistObject>;
     /**
      * Remove an entry from the whitelist
-     * @param id id of entry to remove
+     * @param {string} id id of entry to remove
      * @returns {Promise<WhitelistObject>}
      */
     delete(id: string): Promise<WhitelistObject>;

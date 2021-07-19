@@ -1,10 +1,15 @@
 import { axios } from '../axios-instance';
-import { WizardApiRequest, WizardResponse } from '../models/wizard';
+import { WizardApiRequest, WizardFinalResponse, WizardResponse } from '../models/wizard';
 
 export class WizardService {
 	constructor() {}
 
-	public navigate(request: WizardApiRequest): Promise<WizardResponse> {
+	/**
+	 * Navigate the Wizard
+	 * @param {WizardApiRequest} request The wizard request to send
+	 * @returns {Promise<WizardResponse | WizardFinalResponse>} Either another WizardResponse (step) or the final response
+	 */
+	public navigate(request: WizardApiRequest): Promise<WizardResponse | WizardFinalResponse> {
 		return new Promise((resolve, reject) => {
 			axios
 				.post('/wizard', request)

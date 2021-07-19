@@ -66,16 +66,38 @@
 					<h1>XS2A Node.js</h1>
 				</a>
 				<p>The official Node.js API wrapper for the FinTecSystems XS2A API. Written in Typescript with intellisense support and autocompletion.</p>
-				<p><a href="https://docs.fintecsystems.com/xs2a-nodejs">Documentation (Typedocs)</a></p>
+				<ul>
+					<li><a href="https://docs.fintecsystems.com/xs2a-nodejs">Documentation (Typedocs)</a></li>
+					<li><a href="https://docs.fintecsystems.com/swagger">Full REST-API Reference</a></li>
+					<li><a href="https://fintecsystems.com/en/developer/">Get an API-Key</a></li>
+				</ul>
 				<a href="#get-started" id="get-started" style="color: inherit; text-decoration: none;">
 					<h3>Get Started</h3>
 				</a>
 				<pre><code class="language-bash">npm i @fintecsystems/xs2a-node --save
 </code></pre>
 				<pre><code class="language-js"><span class="hljs-keyword">import</span> { XS2A } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@fintecsystems/xs2a-node&#x27;</span>;
-<span class="hljs-comment">// or const { XS2A } = require(&#x27;xs2a-node&#x27;);</span>
+<span class="hljs-comment">// or const { XS2A } = require(&#x27;@fintecsystems/xs2a-node&#x27;);</span>
 
 <span class="hljs-keyword">const</span> xs2a = <span class="hljs-keyword">new</span> XS2A(<span class="hljs-string">&#x27;your-api-key&#x27;</span>);
+</code></pre>
+				<a href="#usage-example" id="usage-example" style="color: inherit; text-decoration: none;">
+					<h4>Usage Example</h4>
+				</a>
+				<p>Every method returns a promise that you can await. In case of errors (responses with a
+				status code &gt;= 400) the promise will be rejected and you are given the response body in the error.</p>
+				<pre><code class="language-js"><span class="hljs-keyword">try</span> {
+    <span class="hljs-keyword">const</span> riskSession = <span class="hljs-keyword">await</span> xs2a.Risk.create({
+        <span class="hljs-comment">// (optional) session parameters ...</span>
+    });
+
+    <span class="hljs-comment">// Use with e.g. xs2a.js</span>
+    <span class="hljs-keyword">const</span> wizardSessionKey = riskSession.wizard_session_key;
+    <span class="hljs-comment">// Store for later reference</span>
+    <span class="hljs-keyword">const</span> transactionId = riskSession.transaction;
+} <span class="hljs-keyword">catch</span> (error) {
+    <span class="hljs-built_in">console</span>.log(error.status, error.message);
+}
 </code></pre>
 				<a href="#available-methods" id="available-methods" style="color: inherit; text-decoration: none;">
 					<h3>Available Methods</h3>

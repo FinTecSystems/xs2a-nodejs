@@ -24,7 +24,7 @@ export class WhitelistService {
 
 	/**
 	 * Get the details about a whitelist item
-	 * @param id id of entry to get
+	 * @param {string} id id of entry to get
 	 * @returns {Promise<WhitelistObject>}
 	 */
 	public get(id: string): Promise<WhitelistObject> {
@@ -42,7 +42,7 @@ export class WhitelistService {
 
 	/**
 	 * Remove an entry from the whitelist
-	 * @param id id of entry to remove
+	 * @param {string} id id of entry to remove
 	 * @returns {Promise<WhitelistObject>}
 	 */
 	public delete(id: string): Promise<WhitelistObject> {

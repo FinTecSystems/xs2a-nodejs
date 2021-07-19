@@ -3,22 +3,27 @@ export declare class BankUserService {
     constructor();
     /**
      * Get a list of all xs2a.api bank users
-     * @param perPage Items per page
-     * @param page page to display
+     * @param {number} perPage Items per page
+     * @param {number} page page to display
      * @returns {Promise<BankUserList>}
      */
     list(perPage?: number, page?: number): Promise<BankUserList>;
     /**
      * Create a xs2a.api bank user
      * @param {BankUserRequest} request
+     * @returns {Promise<BankUser>}
      */
     create(request: BankUserRequest): Promise<BankUser>;
     /**
-     * Create a xs2a.api bank user by user-id
+     * Get a xs2a.api bank user by user-id
+     * @param {string} userId id of user to be retrieved
+     * @returns {Promise<BankUser>}
      */
     get(userId: string): Promise<BankUser>;
     /**
      * Delete a xs2a.api bank user by user-id
+     * @param {string} userId id of user to be retrieved
+     * @return {Promise<any>}
      */
     delete(userId: string): Promise<any>;
     /**
@@ -31,12 +36,14 @@ export declare class BankUserService {
     /**
      * Get a list of accesstokens for a xs2a.api bank user
      * @param {string} userId The user-id for the user to retrieve all accesstoken for.
+     * @returns {Promise<BankUserAccessTokenList>}
      */
     listAccessTokens(userId: string): Promise<BankUserAccessTokenList>;
     /**
      * Get a specific accesstoken for a xs2a.api bank user
      * @param {string} userId The user-id for the user to retrieve a specific accesstoken for.
      * @param {string} tokenId ID of the accesstoken to get.
+     * @returns {Promise<BankUserAccessToken>}
      */
     getAccessToken(userId: string, tokenId: string): Promise<BankUserAccessToken>;
     /**
@@ -51,6 +58,7 @@ export declare class BankUserService {
      * Delete an accesstoken
      * @param {string} userId The user-id for the user to delete a specific accesstoken for.
      * @param {string} tokenId ID of the accesstoken to delete.
+     * @return {Promise<any>}
      */
     deleteAccessToken(userId: string, tokenId: string): Promise<any>;
 }
