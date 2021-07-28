@@ -1,6 +1,6 @@
 {
   "name": "@fintecsystems/xs2a-node",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "NodeJS library for the XS2A API",
   "main": "build/main/index.js",
   "typings": "build/main/index.d.ts",

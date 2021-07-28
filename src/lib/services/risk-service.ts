@@ -95,7 +95,7 @@ export class RiskService {
 	public getReport(transactionId: string, reportId: string, format: ReportFormat = ReportFormat.JSON, locale: ReportLocale = ReportLocale.EN): Promise<any> {
 		return new Promise((resolve, reject) => {
 			axios
-				.get(`/risks/${transactionId}/reports/${reportId}`, {
+				.get(`/risks/${transactionId}/report/${reportId}`, {
 					params: {
 						format,
 						locale,

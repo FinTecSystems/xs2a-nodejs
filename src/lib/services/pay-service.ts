@@ -48,9 +48,9 @@ export class PayService {
 	 * Change the payment status of a transaction to received or loss
 	 * @param {string} transactionId id of the transaction to update the payment status for
 	 * @param {PaymentStatus} statusToSet the new status to set
-	 * @returns {Promise<object>}
+	 * @returns {Promise<PayObject>}
 	 */
-	public updatePaymentStatus(transactionId: string, statusToSet: PaymentStatus): Promise<object> {
+	public updatePaymentStatus(transactionId: string, statusToSet: PaymentStatus): Promise<PayObject> {
 		return new Promise((resolve, reject) => {
 			axios
 				.post(`/payments/${transactionId}/${statusToSet}`)
@@ -75,7 +75,7 @@ export class PayService {
 	public getReport(transactionId: string, reportId: string, format: ReportFormat = ReportFormat.JSON, locale: ReportLocale = ReportLocale.EN): Promise<any> {
 		return new Promise((resolve, reject) => {
 			axios
-				.get(`/payments/${transactionId}/reports/${reportId}`, {
+				.get(`/payments/${transactionId}/report/${reportId}`, {
 					params: {
 						format,
 						locale,

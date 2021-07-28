@@ -21,9 +21,9 @@ export declare class PayService {
      * Change the payment status of a transaction to received or loss
      * @param {string} transactionId id of the transaction to update the payment status for
      * @param {PaymentStatus} statusToSet the new status to set
-     * @returns {Promise<object>}
+     * @returns {Promise<PayObject>}
      */
-    updatePaymentStatus(transactionId: string, statusToSet: PaymentStatus): Promise<object>;
+    updatePaymentStatus(transactionId: string, statusToSet: PaymentStatus): Promise<PayObject>;
     /**
      * Get a specific report by transaction-id and report-id
      * @param {string} transactionId id of the transaction to get a report for
