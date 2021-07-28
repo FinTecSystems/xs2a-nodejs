@@ -87,15 +87,21 @@ export class RiskService {
 	/**
 	 * Get a specific report by transaction-id and report-id
 	 * @param {string} transactionId id of the transaction to get a report for
-	 * @param {string} reportId ID of the report to be retrieved. If not present, current default report will be used.
+	 * @param {string} [reportId=""] ID of the report to be retrieved. If not present, current default report will be used.
 	 * @param {ReportFormat} [format="json"] The format parameter is optional. The report is available in the following formats: html, pdf and json. This call defaults to JSON.
 	 * @param {ReportLocale} [locale="en"] Locale in which the report will be rendered. This has no effect when using json format.
 	 * @returns {Promise<any>}
 	 */
-	public getReport(transactionId: string, reportId: string, format: ReportFormat = ReportFormat.JSON, locale: ReportLocale = ReportLocale.EN): Promise<any> {
+	public getReport(transactionId: string, reportId: string = '', format: ReportFormat = ReportFormat.JSON, locale: ReportLocale = ReportLocale.EN): Promise<any> {
+		let path = `/risks/${transactionId}/report`;
+
+		if (reportId) {
+			path += `/${reportId}`;
+		}
+
 		return new Promise((resolve, reject) => {
 			axios
-				.get(`/risks/${transactionId}/report/${reportId}`, {
+				.get(path, {
 					params: {
 						format,
 						locale,
