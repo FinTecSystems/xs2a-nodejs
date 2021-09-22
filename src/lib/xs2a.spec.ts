@@ -87,6 +87,36 @@ test('Risk', async (t) => {
 	const session = await Risk.create();
 	t.not(session.wizard_session_key, undefined);
 	t.not(session.transaction, undefined);
+
+	const wizRes1 = await xs2a.Wizard.navigate({
+		key: session.wizard_session_key,
+	});
+	// console.log(wizRes1.form!.elements[0]!.op);
+
+	t.not(wizRes1.form?.elements, undefined);
+	t.true(wizRes1.form?.elements?.some((el) => el.name === 'country_id'));
+	t.true(wizRes1.form?.elements?.some((el) => el.name === 'bank_code'));
+	t.true(wizRes1.form?.elements?.some((el) => el.options['DE'] === 'Deutschland'));
+
+	const wizRes2 = await xs2a.Wizard.navigate({
+		key: session.wizard_session_key,
+		country_id: Country.DE,
+		bank_code: '88888888',
+	});
+
+	t.not(wizRes2.form?.elements, undefined);
+	t.true(wizRes2.form?.elements?.some((el) => el.name === 'USER_NAME'));
+	t.true(wizRes2.form?.elements?.some((el) => el.name === 'USER_PIN'));
+	t.true(wizRes2.form?.elements?.some((el) => el.name === 'privacy_policy'));
+
+	const wizRes3 = await xs2a.Wizard.navigate({
+		key: session.wizard_session_key,
+		USER_NAME: 'abcdef',
+		USER_PIN: '123456',
+		privacy_policy: true
+	});
+
+	t.true(wizRes3.form!.elements?.some((el) => Array.isArray(el.options)));
 })
 
 test('Pay', async (t) => {
@@ -247,12 +277,12 @@ test('API', async (t) => {
 	 */
 	const bankConnections = await bankUsersXs2aInstance.API.BankConnections.list(1, 1);
 	t.not(bankConnections.data[0].id, undefined);
-	t.is(bankConnections.data[0].country_id, 'DE');
+	t.is(bankConnections.data[0].country_id, Country.DE);
 	t.is(bankConnections.data[0].transaction, bankConnectionSessionResponse.transaction);
 
 	const bankConnection = await bankUsersXs2aInstance.API.BankConnections.get(bankConnections.data[0].id);
 	t.not(bankConnection.id, undefined);
-	t.is(bankConnection.country_id, 'DE');
+	t.is(bankConnection.country_id, Country.DE);
 	t.is(bankConnection.transaction, bankConnectionSessionResponse.transaction);
 
 	/**
@@ -274,19 +304,19 @@ test('API', async (t) => {
 	 */
 	const bankAccounts = await bankUsersXs2aInstance.API.BankAccounts.list(1, 1);
 	t.not(bankAccounts.data[0].id, undefined);
-	t.is(bankAccounts.data[0].country_id, 'DE');
+	t.is(bankAccounts.data[0].country_id, Country.DE);
 	t.is(bankAccounts.data[0].bank_code, '88888888');
 	t.is(bankAccounts.data[0].bank_connection_id, bankConnection.id);
 
 	const bankAccountsForBc = await bankUsersXs2aInstance.API.BankAccounts.listForBankConnection(bankConnection.id);
 	t.is(bankAccountsForBc.data[0].id, bankAccounts.data[0].id);
-	t.is(bankAccountsForBc.data[0].country_id, 'DE');
+	t.is(bankAccountsForBc.data[0].country_id, Country.DE);
 	t.is(bankAccountsForBc.data[0].bank_code, '88888888');
 	t.is(bankAccountsForBc.data[0].bank_connection_id, bankConnection.id);
 
 	const bankAccount = await bankUsersXs2aInstance.API.BankAccounts.get(bankAccounts.data[0].id);
 	t.is(bankAccount.id, bankAccounts.data[0].id);
-	t.is(bankAccount.country_id, 'DE');
+	t.is(bankAccount.country_id, Country.DE);
 	t.is(bankAccount.bank_code, '88888888');
 	t.is(bankAccount.bank_connection_id, bankConnection.id);
 
