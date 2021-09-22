@@ -41,7 +41,7 @@ export interface Xs2aChargebackCheckResponse {
 	 * @type {Currency}
 	 * @memberof Xs2aChargebackCheckResponse
 	 */
-	currency_id: Currency;
+	currency_id?: Currency;
 	/**
 	 * Object type, in this case xs2a_chargeback_check
 	 * @type {string}

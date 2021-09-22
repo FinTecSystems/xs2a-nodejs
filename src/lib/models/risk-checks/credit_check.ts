@@ -1,3 +1,5 @@
+import { Currency } from "..";
+
 /**
  * The XS2A.credit_check gathers various information about a customer. The check was designed for example to be used in a loan application process without the need to resort to some other medium.
  * @export
@@ -6,10 +8,10 @@
 export interface Xs2aCreditCheckRequest {
 	/**
 	 *
-	 * @type {Checks}
+	 * @type {Array<string>}
 	 * @memberof Xs2aCreditCheckRequest
 	 */
-	checks?: Checks;
+	checks: string[];
 }
 /**
  *
@@ -56,20 +58,19 @@ export interface Xs2aCreditCheckResponse {
 export interface Xs2aCreditCheckResponseResults {
 	/**
 	 *
-	 * @type {any}
+	 * @type {CreditChecksResult}
 	 * @memberof Xs2aCreditCheckResponseResults
 	 */
-	income: any;
+	income?: CreditChecksResult;
 	/**
 	 *
-	 * @type {any}
+	 * @type {CreditChecksResult}
 	 * @memberof Xs2aCreditCheckResponseResults
 	 */
-	rent: any;
+	rent?: CreditChecksResult;
 }
 
-/**
- *
- * @export
- */
-export type Checks = string[]
+export interface CreditChecksResult {
+	amount: number,
+	currency?: Currency,
+}

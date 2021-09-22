@@ -45,7 +45,7 @@ export interface Xs2aBalanceOverviewResponse {
 	 * @type {Currency}
 	 * @memberof Xs2aBalanceOverviewResponse
 	 */
-	currency_id: Currency;
+	currency_id?: Currency;
 	/**
 	 * Creation date of the object
 	 * @type {string}

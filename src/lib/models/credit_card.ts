@@ -23,13 +23,13 @@ export interface CreditCardsObject {
 	 * @type {string}
 	 * @memberof CreditCardsObject
 	 */
-	bic: string;
+	bic?: string;
 	/**
 	 *
 	 * @type {Country}
 	 * @memberof CreditCardsObject
 	 */
-	country_id: Country;
+	country_id?: Country;
 	/**
 	 * name of the bank
 	 * @type {string}

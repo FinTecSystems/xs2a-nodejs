@@ -135,13 +135,13 @@ export interface PayObject {
 	 * @type {string}
 	 * @memberof PayObject
 	 */
-	id?: string;
+	id: string;
 	/**
 	 * Internal XS2A transaction id. This id will be the same for the whole transaction
 	 * @type {string}
 	 * @memberof PayObject
 	 */
-	transaction?: string;
+	transaction: string;
 	/**
 	 * Account holder of the sender account
 	 * @type {string}
@@ -207,13 +207,13 @@ export interface PayObject {
 	 * @type {string}
 	 * @memberof PayObject
 	 */
-	purpose?: string;
+	purpose: string;
 	/**
 	 * Amount to transfer
 	 * @type {number}
 	 * @memberof PayObject
 	 */
-	amount?: number;
+	amount: number;
 	/**
 	 * Currency id of amount, e.g. 'EUR'
 	 * @type {Currency}
@@ -225,13 +225,13 @@ export interface PayObject {
 	 * @type {string}
 	 * @memberof PayObject
 	 */
-	testmode?: string;
+	testmode: string;
 	/**
 	 * Payment status of the transaction, values NONE, RECEIVED, LOSS
 	 * @type {string}
 	 * @memberof PayObject
 	 */
-	payment_status?: string;
+	payment_status: PaymentStatus;
 	/**
 	 * Custom data will be returned unchanged. If no data was submitted, this field will be null
 	 * @type {any}
@@ -249,8 +249,9 @@ export interface PayObject {
 	 * @type {string}
 	 * @memberof PayObject
 	 */
-	object?: string;
+	object: string;
 }
+
 
 export interface PayQueryParameters {
 	/**
@@ -354,13 +355,13 @@ export interface PaymentsTransactionList {
 	 * @type {number}
 	 * @memberof PaymentsTransactionList
 	 */
-	from: number;
+	from?: number;
 	/**
 	 * Showing results to index element.
 	 * @type {number}
 	 * @memberof PaymentsTransactionList
 	 */
-	to: number;
+	to?: number;
 	/**
 	 *
 	 * @type {Array<RiskObject>}
@@ -370,6 +371,7 @@ export interface PaymentsTransactionList {
 }
 
 export enum PaymentStatus {
-	RECEIVED = "received",
-	LOSS = "loss",
+	RECEIVED = "RECEIVED",
+	LOSS = "LOSS",
+	NONE = "NONE"
 }

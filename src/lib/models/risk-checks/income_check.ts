@@ -41,7 +41,7 @@ export interface Xs2aIncomeCheckResponseData {
 	 * @type {Xs2aIncomeCheckResponseDataCategoryShortName}
 	 * @memberof Xs2aIncomeCheckResponseData
 	 */
-	category_short_name: Xs2aIncomeCheckResponseDataCategoryShortName;
+	category_short_name?: Xs2aIncomeCheckResponseDataCategoryShortName;
 }
 /**
  *
@@ -51,10 +51,10 @@ export interface Xs2aIncomeCheckResponseData {
 export interface Xs2aIncomeCheckResponseDataCategoryShortName {
 	/**
 	 *
-	 * @type {any}
+	 * @type {object}
 	 * @memberof Xs2aIncomeCheckResponseDataCategoryShortName
 	 */
-	monthly_sums: any;
+	monthly_sums: object;
 	/**
 	 *
 	 * @type {number}
@@ -108,5 +108,16 @@ export interface Xs2aIncomeCheckResponseDataCategoryShortName {
 	 * @type {any}
 	 * @memberof Xs2aIncomeCheckResponseDataCategoryShortName
 	 */
-	employer: any;
+	employer: Employer;
+}
+
+export interface Employer {
+	name: string;
+	months_with_salaries_count: number;
+	booking_date_first_salary: string;
+	booking_date_last_salary: string;
+	months_sums_median: number;
+	months_sums_minimum: number;
+	public_employer: boolean;
+	current_employer: boolean;
 }

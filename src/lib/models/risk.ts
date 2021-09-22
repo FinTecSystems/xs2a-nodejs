@@ -341,7 +341,7 @@ export interface RiskObject {
 	 * @type {Country}
 	 * @memberof RiskObject
 	 */
-	country_id: Country;
+	country_id?: Country;
 	/**
 	 * Indicates whether or not it is a test transaction
 	 * @type {string}
@@ -359,19 +359,19 @@ export interface RiskObject {
 	 * @type {object | null}
 	 * @memberof RiskObject
 	 */
-	metadata: object | null;
+	metadata?: object | null;
 	/**
 	 * Data will be returned unchanged
 	 * @type {string}
 	 * @memberof RiskObject
 	 */
-	merchant_id: string;
+	merchant_id?: string;
 	/**
 	 * Object type, in this case a xs2a_risk
 	 * @type {string}
 	 * @memberof RiskObject
 	 */
-	object?: string;
+	object: string;
 	/**
 	 *
 	 * @type {Xs2aAccountSnapshotResponse}
@@ -541,13 +541,13 @@ export interface RisksTransactionList {
 	 * @type {number}
 	 * @memberof RisksTransactionList
 	 */
-	from: number;
+	from?: number;
 	/**
 	 * Showing results to index element.
 	 * @type {number}
 	 * @memberof RisksTransactionList
 	 */
-	to: number;
+	to?: number;
 	/**
 	 *
 	 * @type {Array<RiskObject>}

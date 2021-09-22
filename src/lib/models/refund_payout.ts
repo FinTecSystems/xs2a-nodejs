@@ -107,13 +107,13 @@ export interface RefundPayoutList {
 	 * @type {number}
 	 * @memberof RefundPayoutList
 	 */
-	from: number;
+	from?: number;
 	/**
 	 * Showing results to index element.
 	 * @type {number}
 	 * @memberof RefundPayoutList
 	 */
-	to: number;
+	to?: number;
 	/**
 	 *
 	 * @type {Array<RefundPayoutObject>}

@@ -92,25 +92,25 @@ export interface EventsList {
 	 * @type {string}
 	 * @memberof EventsList
 	 */
-	next_page_url: string;
+	next_page_url?: string;
 	/**
 	 * URI to previous page.
 	 * @type {string}
 	 * @memberof EventsList
 	 */
-	prev_page_url: string;
+	prev_page_url?: string;
 	/**
 	 * Showing results from index element.
 	 * @type {number}
 	 * @memberof EventsList
 	 */
-	from: number;
+	from?: number;
 	/**
 	 * Showing results to index element.
 	 * @type {number}
 	 * @memberof EventsList
 	 */
-	to: number;
+	to?: number;
 	/**
 	 *
 	 * @type {Array<EventObject>}

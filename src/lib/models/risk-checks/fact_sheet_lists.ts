@@ -46,13 +46,13 @@ export interface Xs2aFactSheetListsFields {
 	 * @type {number}
 	 * @memberof Xs2aFactSheetListsFields
 	 */
-	min_amount: number;
+	min_amount?: number;
 	/**
 	 *
 	 * @type {number}
 	 * @memberof Xs2aFactSheetListsFields
 	 */
-	max_amount: number;
+	max_amount?: number;
 }
 /**
  * This module allows you to create a lists of filtered transaction data from the reference account. The request can be filtered using the appropriate filters based on a set number of days, categories and/or tags, min. and/or max. amount. As a result, several key characteristics are given per list: transaction total, available days, number of contra accounts, number of transactions. In addition, extensive lists of filtered turnovers, purposes and contra account holders can be downloaded using a specific endpoint.
@@ -71,7 +71,7 @@ export interface Xs2aFactSheetListsResponse {
 	 * @type {number}
 	 * @memberof Xs2aFactSheetListsResponse
 	 */
-	days: number;
+	days?: number;
 	/**
 	 *
 	 * @type {Array<Xs2aFactSheetListsResponseResult>}
@@ -120,13 +120,13 @@ export interface Xs2aFactSheetListsResponseFields {
 	 * @type {number}
 	 * @memberof Xs2aFactSheetListsResponseFields
 	 */
-	min_amount: number;
+	min_amount?: number;
 	/**
 	 *
 	 * @type {number}
 	 * @memberof Xs2aFactSheetListsResponseFields
 	 */
-	max_amount: number;
+	max_amount?: number;
 }
 /**
  *

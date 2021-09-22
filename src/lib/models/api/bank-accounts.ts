@@ -37,25 +37,25 @@ export interface BankAccountsList {
 	 * @type {string}
 	 * @memberof BankAccountsList
 	 */
-	next_page_url: string;
+	next_page_url?: string;
 	/**
 	 * URI to previous page.
 	 * @type {string}
 	 * @memberof BankAccountsList
 	 */
-	prev_page_url: string;
+	prev_page_url?: string;
 	/**
 	 * Showing results from index element.
 	 * @type {number}
 	 * @memberof BankAccountsList
 	 */
-	from: number;
+	from?: number;
 	/**
 	 * Showing results to index element.
 	 * @type {number}
 	 * @memberof BankAccountsList
 	 */
-	to: number;
+	to?: number;
 	/**
 	 *
 	 * @type {Array<BankAccount>}
@@ -105,13 +105,13 @@ export interface BankAccount {
 	 * @type {string}
 	 * @memberof BankAccount
 	 */
-	bic: string;
+	bic?: string;
 	/**
 	 * Number of the account
 	 * @type {string}
 	 * @memberof BankAccount
 	 */
-	account_number: string;
+	account_number?: string;
 	/**
 	 * bank code of the bank
 	 * @type {string}
@@ -129,13 +129,13 @@ export interface BankAccount {
 	 * @type {Country}
 	 * @memberof BankAccount
 	 */
-	country_id: Country;
+	country_id?: Country;
 	/**
 	 * The type of the bank of the bank connection
 	 * @type {string}
 	 * @memberof BankAccount
 	 */
-	type: string;
+	type: BankAccountType;
 	/**
 	 * Indicates whether this account has more than one owner.
 	 * @type {boolean}
@@ -160,6 +160,24 @@ export interface BankAccount {
 	 * @memberof BankAccount
 	 */
 	object: string;
+}
+
+export enum BankAccountType {
+	GIRO = "giro",
+	CREDITCARD = "creditcard",
+	SAVINGS = "savings",
+	LOAN = "loan",
+	SECURITIES = "securities",
+	WALLET = "wallet",
+	OTHER = "other"
+}
+
+export interface BankAccountObject {
+	holder: string,
+	description: string,
+	iban: string,
+	bic?: string,
+	country_id?: Country,
 }
 
 /**
@@ -197,7 +215,7 @@ export interface BankAccountBalance {
 	 * @type {string}
 	 * @memberof BankAccountBalance
 	 */
-	currency_id: Currency;
+	currency_id?: Currency;
 	/**
 	 * The date the balance was seen on.
 	 * @type {string}
@@ -241,7 +259,7 @@ export interface BankAccountTurnovers {
 	 * @type {number}
 	 * @memberof BankAccountTurnovers
 	 */
-	days: number;
+	days?: number;
 	/**
 	 * The date the turnovers were seen on.
 	 * @type {string}
