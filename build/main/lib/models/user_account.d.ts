@@ -35,13 +35,13 @@ export interface UserAccountsObject {
      * @type {string}
      * @memberof UserAccountsObject
      */
-    bic: string;
+    bic?: string;
     /**
      * Account number
      * @type {string}
      * @memberof UserAccountsObject
      */
-    account_number: string;
+    account_number?: string;
     /**
      * Bank code
      * @type {string}
@@ -59,7 +59,7 @@ export interface UserAccountsObject {
      * @type {Country}
      * @memberof UserAccountsObject
      */
-    country_id: Country;
+    country_id?: Country;
     /**
      * Joint Account
      * @type {string}
@@ -101,7 +101,7 @@ export interface UserAccountsObject {
      * @type {Currency}
      * @memberof UserAccountsObject
      */
-    currency_id: Currency;
+    currency_id?: Currency;
     /**
      * Turnover days
      * @type {number}
@@ -174,13 +174,13 @@ export interface OtherAccountsObject {
      * @type {string}
      * @memberof OtherAccountsObject
      */
-    bic: string;
+    bic?: string;
     /**
      *
      * @type {Country}
      * @memberof OtherAccountsObject
      */
-    country_id: Country;
+    country_id?: Country;
     /**
      * name of the bank
      * @type {string}

@@ -1,3 +1,4 @@
+import { BankAccountObject, Currency } from "..";
 /**
  * XS2A.standing_orders_check allows you to retrieve all standing orders from an account. An XS2A.standing_orders_check has no additional parameters. Simply append an empty object to the XS2A.risk object to indicate you would like this check to be performed.
  * @export
@@ -38,16 +39,16 @@ export interface Xs2aStandingOrdersCheckResponse {
 export interface Xs2aStandingOrdersCheckResponseStandingOrders {
     /**
      *
-     * @type {any}
+     * @type {BankAccountObject}
      * @memberof Xs2aStandingOrdersCheckResponseStandingOrders
      */
-    sender_account: any;
+    sender_account: BankAccountObject;
     /**
      *
-     * @type {any}
+     * @type {BankAccountObject}
      * @memberof Xs2aStandingOrdersCheckResponseStandingOrders
      */
-    recipient_account: any;
+    recipient_account: BankAccountObject;
     /**
      * Amount to transfer
      * @type {number}
@@ -56,10 +57,10 @@ export interface Xs2aStandingOrdersCheckResponseStandingOrders {
     amount: number;
     /**
      * Currency id of amount, e.g. EUR
-     * @type {string}
+     * @type {Currency}
      * @memberof Xs2aStandingOrdersCheckResponseStandingOrders
      */
-    currency: string;
+    currency?: Currency;
     /**
      * Purpose of the transfer
      * @type {string}
@@ -89,11 +90,11 @@ export interface Xs2aStandingOrdersCheckResponseStandingOrders {
      * @type {string}
      * @memberof Xs2aStandingOrdersCheckResponseStandingOrders
      */
-    start_execution: string;
+    start_execution?: string;
     /**
      * Date of the last execution of the standing order, format YYYY-mm-dd.
      * @type {string}
      * @memberof Xs2aStandingOrdersCheckResponseStandingOrders
      */
-    end_execution: string;
+    end_execution?: string;
 }

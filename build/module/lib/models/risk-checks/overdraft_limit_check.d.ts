@@ -47,7 +47,7 @@ export interface Xs2aOverdraftLimitCheckResponse {
      * @type {Currency}
      * @memberof Xs2aOverdraftLimitCheckResponse
      */
-    currency_id: Currency;
+    currency_id?: Currency;
     /**
      * Object type, in this case xs2a_overdraft_limit_check
      * @type {string}

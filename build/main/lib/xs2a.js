@@ -17,7 +17,7 @@ class XS2A {
         axios_instance_1.axios.defaults.headers.common.Authorization = `Basic ${Buffer.from(`api:${this.apiKey}`).toString('base64')}`;
         axios_instance_1.axios.defaults.headers.common['Content-Type'] = 'application/json';
         axios_instance_1.axios.defaults.headers.common['X-Client'] = 'xs2a-node';
-        axios_instance_1.axios.defaults.headers.common['X-Client-Version'] = '1.0.4';
+        axios_instance_1.axios.defaults.headers.common['X-Client-Version'] = '1.1.0';
         axios_instance_1.axios.defaults.baseURL = url;
         this.Risk = new risk_service_1.RiskService();
         this.Pay = new pay_service_1.PayService();

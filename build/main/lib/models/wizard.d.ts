@@ -108,26 +108,25 @@ export interface WizardResponse {
      * @type {string}
      * @memberof WizardResponse
      */
-    message: string;
+    message?: string;
     /**
      * Will be set if an error occurs during the processing of the current step (e.g. the session has expired). If the recoverable flag equals false a new session has to be started.
      * @type {Array<string>}
      * @memberof WizardResponse
      */
-    error: string[];
+    error?: any;
     /**
      *
      * @type {Polling}
      * @memberof WizardResponse
      */
-    polling: Polling;
+    polling?: Polling;
     /**
      *
      * @type {FormObject}
      * @memberof WizardResponse
      */
-    form: FormObject;
-    additional_data?: any;
+    form?: FormObject;
 }
 /**
  *
@@ -158,7 +157,7 @@ export interface WizardSessionObject {
      * @type {string}
      * @memberof WizardSessionObject
      */
-    product: Product;
+    product?: Product;
     /**
      * An array which contains the current wizard configuration.
      * @type {any}
@@ -262,11 +261,11 @@ export interface FormCaptcha {
      */
     invalid: boolean;
     /**
-     * A list of failed validation rules (concatenated with a pipe character)
-     * @type {string}
+     * A list of failed validation rules. String if empty and Array of Strings if populated
+     * @type {any}
      * @memberof FormCaptcha
      */
-    failed_validation_rules: string;
+    failed_validation_rules: any;
     /**
      * The validation error (human readable)
      * @type {string}
@@ -317,11 +316,11 @@ export interface FormCheckbox {
      */
     invalid: boolean;
     /**
-     * A list of failed validation rules (concatenated with a pipe character)
-     * @type {string}
+     * A list of failed validation rules. String if empty and Array of Strings if populated
+     * @type {any}
      * @memberof FormCheckbox
      */
-    failed_validation_rules: string;
+    failed_validation_rules: any;
     /**
      * The validation error (human readable)
      * @type {string}
@@ -378,11 +377,11 @@ export interface FormFlicker {
      */
     invalid: boolean;
     /**
-     * A list of failed validation rules (concatenated with a pipe character)
-     * @type {string}
+     * A list of failed validation rules. String if empty and Array of Strings if populated
+     * @type {any}
      * @memberof FormFlicker
      */
-    failed_validation_rules: string;
+    failed_validation_rules: any;
     /**
      * The validation error (human readable)
      * @type {string}
@@ -558,11 +557,11 @@ export interface FormPassword {
      */
     invalid: boolean;
     /**
-     * A list of failed validation rules (concatenated with a pipe character)
-     * @type {string}
+     * A list of failed validation rules. String if empty and Array of Strings if populated
+     * @type {any}
      * @memberof FormPassword
      */
-    failed_validation_rules: string;
+    failed_validation_rules: any;
     /**
      * The validation error (human readable)
      * @type {string}
@@ -590,16 +589,16 @@ export interface FormRadio {
     name: string;
     /**
      * Index of the checked element
-     * @type {string}
+     * @type {number}
      * @memberof FormRadio
      */
-    checked: string;
+    checked: number;
     /**
      * An array of possible options
-     * @type {Array<string>}
+     * @type {Array<FormRadioOption>}
      * @memberof FormRadio
      */
-    options: string[];
+    options: FormRadioOption[];
     /**
      * The label of the form element
      * @type {string}
@@ -619,17 +618,21 @@ export interface FormRadio {
      */
     invalid: boolean;
     /**
-     * A list of failed validation rules (concatenated with a pipe character)
-     * @type {string}
+     * A list of failed validation rules. String if empty and Array of Strings if populated
+     * @type {any}
      * @memberof FormRadio
      */
-    failed_validation_rules: string;
+    failed_validation_rules: any;
     /**
      * The validation error (human readable)
      * @type {string}
      * @memberof FormRadio
      */
     validation_error: string;
+}
+export interface FormRadioOption {
+    label: string;
+    disabled: boolean;
 }
 /**
  *
@@ -656,11 +659,11 @@ export interface FormSelect {
      */
     selected: number;
     /**
-     * Object with key value
-     * @type {Array<string>}
+     * Object with key as key and value as label
+     * @type {Map<string, string>}
      * @memberof FormSelect
      */
-    options: string[];
+    options: Map<string, string>;
     /**
      * The label of the form element
      * @type {string}
@@ -680,11 +683,11 @@ export interface FormSelect {
      */
     invalid: boolean;
     /**
-     * A list of failed validation rules (concatenated with a pipe character)
-     * @type {string}
+     * A list of failed validation rules. String if empty and Array of Strings if populated
+     * @type {any}
      * @memberof FormSelect
      */
-    failed_validation_rules: string;
+    failed_validation_rules: any;
     /**
      * The validation error (human readable)
      * @type {string}
@@ -772,11 +775,11 @@ export interface FormText {
      */
     invalid: boolean;
     /**
-     * A list of failed validation rules (concatenated with a pipe character)
-     * @type {string}
+     * A list of failed validation rules. String if empty and Array of Strings if populated
+     * @type {any}
      * @memberof FormText
      */
-    failed_validation_rules: string;
+    failed_validation_rules: any;
     /**
      * The validation error (human readable)
      * @type {string}

@@ -37,10 +37,10 @@ export interface Xs2aAccountCharacteristicsCheckResponse {
     loans: LoansObject[];
     /**
      *
-     * @type {Array<FlagsObject>}
+     * @type {object}
      * @memberof Xs2aAccountCharacteristicsCheckResponse
      */
-    flags: FlagsObject[];
+    flags: object;
     /**
      * Object type, in this case xs2a_account_characteristics_check
      * @type {string}
@@ -128,6 +128,11 @@ export interface AccountProfileObject {
      * @memberof AccountProfileObject
      */
     cash_deposits: number;
+    payment_gez: string;
+    payment_schufa: string;
+    payment_donation: string;
+    payment_party: string;
+    payment_club: string;
 }
 /**
  *
@@ -153,23 +158,4 @@ export interface LoansObject {
      * @memberof LoansObject
      */
     subprime_lender_count: number;
-}
-/**
- *
- * @export
- * @interface FlagsObject
- */
-export interface FlagsObject {
-    /**
-     * If there are some gambling usage, it will be true
-     * @type {boolean}
-     * @memberof FlagsObject
-     */
-    gambling: boolean;
-    /**
-     * If there are some credit card usage, it will be true
-     * @type {boolean}
-     * @memberof FlagsObject
-     */
-    creditcard: boolean;
 }

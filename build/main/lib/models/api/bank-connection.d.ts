@@ -115,7 +115,7 @@ export interface BankConnection {
      * @type {string}
      * @memberof BankConnection
      */
-    bic: string;
+    bic?: string;
     /**
      * The name of the bank of the bank connection
      * @type {string}
@@ -127,13 +127,13 @@ export interface BankConnection {
      * @type {Country}
      * @memberof BankConnection
      */
-    country_id: Country;
+    country_id?: Country;
     /**
      * The mode how the bank connection is synced. full, shared or none.
      * @type {string}
      * @memberof BankConnection
      */
-    sync_mode: string;
+    sync_mode?: SyncMode;
     /**
      * Indicates whether the sync is active
      * @type {boolean}
@@ -163,7 +163,7 @@ export interface BankConnection {
      * @type {string}
      * @memberof BankConnection
      */
-    consent_valid_until: string;
+    consent_valid_until?: string;
     /**
      * Indicates whether this bank connection is in test mode
      * @type {boolean}
@@ -218,25 +218,25 @@ export interface BankConnectionList {
      * @type {string}
      * @memberof BankConnectionList
      */
-    next_page_url: string;
+    next_page_url?: string;
     /**
      * URI to previous page.
      * @type {string}
      * @memberof BankConnectionList
      */
-    prev_page_url: string;
+    prev_page_url?: string;
     /**
      * Showing results from index element.
      * @type {number}
      * @memberof BankConnectionList
      */
-    from: number;
+    from?: number;
     /**
      * Showing results to index element.
      * @type {number}
      * @memberof BankConnectionList
      */
-    to: number;
+    to?: number;
     /**
      *
      * @type {Array<BankConnection>}

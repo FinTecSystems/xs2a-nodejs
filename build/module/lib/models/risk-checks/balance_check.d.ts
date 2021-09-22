@@ -13,10 +13,10 @@ export interface Xs2aBalanceCheckRequest {
     check_amount: number;
     /**
      * Currency id of check_amount, e.g. EUR
-     * @type {string}
+     * @type {Currency}
      * @memberof Xs2aBalanceCheckRequest
      */
-    check_currency_id: Currency;
+    check_currency_id?: Currency;
 }
 /**
  *
@@ -41,13 +41,13 @@ export interface Xs2aBalanceCheckResponse {
      * @type {Currency}
      * @memberof Xs2aBalanceCheckResponse
      */
-    check_currency_id: Currency;
+    check_currency_id?: Currency;
     /**
      * Indicates whether or not the check was successful
-     * @type {boolean}
+     * @type {string}
      * @memberof Xs2aBalanceCheckResponse
      */
-    check_passed: boolean;
+    check_passed: string;
     /**
      * Creation date of the object
      * @type {string}

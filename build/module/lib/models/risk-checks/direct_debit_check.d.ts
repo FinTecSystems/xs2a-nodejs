@@ -10,13 +10,13 @@ export interface Xs2aDirectDebitCheckRequest {
      * @type {number}
      * @memberof Xs2aDirectDebitCheckRequest
      */
-    check_amount?: number;
+    check_amount: number;
     /**
      * Currency id of check_amount, e.g. EUR
      * @type {Currency}
      * @memberof Xs2aDirectDebitCheckRequest
      */
-    check_currency_id?: Currency;
+    check_currency_id: Currency;
     /**
      * Date format is \"YYYY-mm-dd\". An optional field. If a start_date is given, the field \"end_date\" has to be set as well. The start date can be no earlier than the day after the transaction. In case the start date is invalid or not set, the earliest bank work day will be used.
      * @type {string}
@@ -47,19 +47,19 @@ export interface Xs2aDirectDebitCheckResponse {
      * @type {Currency}
      * @memberof Xs2aDirectDebitCheckResponse
      */
-    check_currency_id: Currency;
+    check_currency_id?: Currency;
     /**
      * An optional field. The date format is \"YYYY-mm-dd\". If a start_date is given, the field \"end_date\" has to be set as well. The start date can be no earlier than the day after the transaction.  In case the start date is invalid or not set, the earliest bank work  day will be used.
      * @type {string}
      * @memberof Xs2aDirectDebitCheckResponse
      */
-    start_date: string;
+    start_date?: string;
     /**
      * An optional field. The date format is \"YYYY-mm-dd\". The end date has to be at lest 3 days after the start date and can be a maximum of 30 days into the  future. If there is no end date given, the maximum of 30 days will be used.
      * @type {string}
      * @memberof Xs2aDirectDebitCheckResponse
      */
-    end_date: string;
+    end_date?: string;
     /**
      * This field represents the response from our system. The values will either be ANY,  DATE or REJECT. If ANY is returned, it should be save to execute the direct debit at  any time. If DATE is returned, we suggest a date for executing the direct debit  in the field recommendation_date. In case of a REJECT it is not recommended to  execute a direct debit, because the amount is likely not be covered. For a REJECT  the returned recommendation_date will always be \"0000-00-00\".
      * @type {string}
@@ -71,7 +71,7 @@ export interface Xs2aDirectDebitCheckResponse {
      * @type {string}
      * @memberof Xs2aDirectDebitCheckResponse
      */
-    recommendation_date: string;
+    recommendation_date?: string;
     /**
      * Object type, in this case xs2a_direct_debit_check
      * @type {string}

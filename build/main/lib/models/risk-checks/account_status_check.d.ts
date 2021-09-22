@@ -17,7 +17,7 @@ export interface Xs2aAccountStatusCheckRequest {
      * @type {boolean}
      * @memberof Xs2aAccountStatusCheckRequest
      */
-    all_accounts?: boolean;
+    all_accounts: boolean;
 }
 /**
  *
@@ -48,13 +48,13 @@ export interface Xs2aAccountStatusCheckResponse {
      * @type {number}
      * @memberof Xs2aAccountStatusCheckResponse
      */
-    days: number;
+    days?: number;
     /**
      * Shows the chosen option, with all accounts or not
-     * @type {boolean}
+     * @type {string}
      * @memberof Xs2aAccountStatusCheckResponse
      */
-    all_accounts: boolean;
+    all_accounts: string;
     /**
      * Creation date of the object
      * @type {string}

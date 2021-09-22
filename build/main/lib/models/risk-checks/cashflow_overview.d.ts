@@ -78,5 +78,5 @@ export interface Xs2aCashflowObject {
      * @type {Currency}
      * @memberof Xs2aCashflowObject
      */
-    currency_id: Currency;
+    currency_id?: Currency;
 }

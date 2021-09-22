@@ -23,7 +23,7 @@ export class XS2A {
         axios.defaults.headers.common.Authorization = `Basic ${Buffer.from(`api:${this.apiKey}`).toString('base64')}`;
         axios.defaults.headers.common['Content-Type'] = 'application/json';
         axios.defaults.headers.common['X-Client'] = 'xs2a-node';
-        axios.defaults.headers.common['X-Client-Version'] = '1.0.4';
+        axios.defaults.headers.common['X-Client-Version'] = '1.1.0';
         axios.defaults.baseURL = url;
         this.Risk = new RiskService();
         this.Pay = new PayService();

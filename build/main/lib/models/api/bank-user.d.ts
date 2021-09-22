@@ -95,25 +95,25 @@ export interface BankUserList {
      * @type {string}
      * @memberof BankUserList
      */
-    next_page_url: string;
+    next_page_url?: string;
     /**
      * URI to previous page.
      * @type {string}
      * @memberof BankUserList
      */
-    prev_page_url: string;
+    prev_page_url?: string;
     /**
      * Showing results from index element.
      * @type {number}
      * @memberof BankUserList
      */
-    from: number;
+    from?: number;
     /**
      * Showing results to index element.
      * @type {number}
      * @memberof BankUserList
      */
-    to: number;
+    to?: number;
     /**
      *
      * @type {Array<BankUser>}
@@ -144,7 +144,7 @@ export interface BankUserAccessToken {
      * @type {string}
      * @memberof BankUserAccessToken
      */
-    valid_until: string;
+    valid_until?: string;
     /**
      * Date of creation
      * @type {string}
@@ -193,25 +193,25 @@ export interface BankUserAccessTokenList {
      * @type {string}
      * @memberof BankUserAccessTokenList
      */
-    next_page_url: string;
+    next_page_url?: string;
     /**
      * URI to previous page.
      * @type {string}
      * @memberof BankUserAccessTokenList
      */
-    prev_page_url: string;
+    prev_page_url?: string;
     /**
      * Showing results from index element.
      * @type {number}
      * @memberof BankUserAccessTokenList
      */
-    from: number;
+    from?: number;
     /**
      * Showing results to index element.
      * @type {number}
      * @memberof BankUserAccessTokenList
      */
-    to: number;
+    to?: number;
     /**
      *
      * @type {Array<BankUserAccessToken>}

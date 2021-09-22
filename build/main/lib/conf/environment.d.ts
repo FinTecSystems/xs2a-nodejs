@@ -3,4 +3,4 @@
  *
  * @ignore
  */
-export declare const API_BASE_URL = "https://api.xs2a.com/v1";
+export declare const API_BASE_URL = "https://api.xs2a.com";

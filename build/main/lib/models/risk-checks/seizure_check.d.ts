@@ -28,7 +28,7 @@ export interface Xs2aSeizureCheckResponse {
      * @type {number}
      * @memberof Xs2aSeizureCheckResponse
      */
-    days: number;
+    days?: number;
     /**
      * Object type, in this case xs2a_seizure_check
      * @type {string}

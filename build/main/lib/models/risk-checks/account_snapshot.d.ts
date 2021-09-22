@@ -1,3 +1,4 @@
+import { Currency } from "..";
 import { Country } from "../country";
 import { Turnover } from "../turnover";
 /**
@@ -35,13 +36,13 @@ export interface Xs2aAccountSnapshotRequest {
      * @type {boolean}
      * @memberof Xs2aAccountSnapshotRequest
      */
-    all_accounts?: boolean;
+    all_accounts: boolean;
     /**
      * True, if you want full categorization of the turnovers
      * @type {boolean}
      * @memberof Xs2aAccountSnapshotRequest
      */
-    all_tags?: boolean;
+    all_tags: boolean;
 }
 /**
  *
@@ -75,19 +76,19 @@ export interface Xs2aAccountSnapshotResponse {
      * @type {number}
      * @memberof Xs2aAccountSnapshotResponse
      */
-    days: number;
+    days?: number;
     /**
      * The start date in the format yyyy-mm-dd
      * @type {string}
      * @memberof Xs2aAccountSnapshotResponse
      */
-    from: string;
+    from?: string;
     /**
      * The end date in the format yyyy-mm-dd
      * @type {string}
      * @memberof Xs2aAccountSnapshotResponse
      */
-    to: string;
+    to?: string;
     /**
      * Filter account statements
      * @type {Array<string>}
@@ -96,10 +97,10 @@ export interface Xs2aAccountSnapshotResponse {
     filters: Filters;
     /**
      * 1, if the turnovers were fully categorized, 0 otherwise
-     * @type {boolean}
+     * @type {string}
      * @memberof Xs2aAccountSnapshotResponse
      */
-    all_tags: boolean;
+    all_tags: string;
     /**
      * Creation date of the object
      * @type {string}
@@ -166,13 +167,13 @@ export interface AccountStatementAccount {
      * @type {string}
      * @memberof AccountStatementAccount
      */
-    bic: string;
+    bic?: string;
     /**
      * 2-letter country code of the account
      * @type {Country}
      * @memberof AccountStatementAccount
      */
-    country_id: Country;
+    country_id?: Country;
     /**
      * Indicates whether this is a joint account
      * @type {boolean}
@@ -209,7 +210,7 @@ export interface AccountStatementBalance {
      * @type {string}
      * @memberof AccountStatementBalance
      */
-    currency: string;
+    currency?: Currency;
     /**
      * The date the balance was seen on.
      * @type {string}
@@ -240,7 +241,7 @@ export interface AccountStatementTurnovers {
      * @type {number}
      * @memberof AccountStatementTurnovers
      */
-    days: number;
+    days?: number;
     /**
      * Array of filters applied
      * @type {Array<string>}

@@ -106,8 +106,14 @@ export interface MatchesObject {
     expected_holder: string;
     /**
      *
-     * @type {string}
+     * @type {MatchType}
      * @memberof MatchesObject
      */
-    match: string;
+    match: MatchType;
+}
+export declare enum MatchType {
+    NONE = "none",
+    LAST_NAME = "last_name",
+    PERSON = "person",
+    COMPANY = "company"
 }
