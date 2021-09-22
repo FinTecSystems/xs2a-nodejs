@@ -90,7 +90,6 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="turnover.html#_new" class="tsd-kind-icon">_new</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="turnover.html#amount" class="tsd-kind-icon">amount</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="turnover.html#booking_date" class="tsd-kind-icon">booking_<wbr>date</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="turnover.html#canceled" class="tsd-kind-icon">canceled</a></li>
@@ -100,6 +99,7 @@
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="turnover.html#counter_iban" class="tsd-kind-icon">counter_<wbr>iban</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="turnover.html#creditor_id" class="tsd-kind-icon">creditor_<wbr>id</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="turnover.html#currency" class="tsd-kind-icon">currency</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="turnover.html#new" class="tsd-kind-icon">new</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="turnover.html#prebooked" class="tsd-kind-icon">prebooked</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="turnover.html#purpose" class="tsd-kind-icon">purpose</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="turnover.html#tags" class="tsd-kind-icon">tags</a></li>
@@ -111,32 +111,12 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="_new" class="tsd-anchor"></a>
-					<h3>_new</h3>
-					<div class="tsd-signature tsd-kind-icon">_new<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/FinTecSystems/xs2a-nodejs/blob/1cefb05/src/lib/models/turnover.ts#L84">lib/models/turnover.ts:84</a></li>
-						</ul>
-					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>True, if this turnover is new since the last sync.</p>
-						</div>
-						<dl class="tsd-comment-tags">
-							<dt>memberof</dt>
-							<dd><p>Turnover</p>
-							</dd>
-						</dl>
-					</div>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="amount" class="tsd-anchor"></a>
 					<h3>amount</h3>
 					<div class="tsd-signature tsd-kind-icon">amount<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/FinTecSystems/xs2a-nodejs/blob/1cefb05/src/lib/models/turnover.ts#L18">lib/models/turnover.ts:18</a></li>
+							<li>Defined in <a href="https://github.com/FinTecSystems/xs2a-nodejs/blob/cde598b/src/lib/models/turnover.ts#L20">lib/models/turnover.ts:20</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -156,7 +136,7 @@
 					<div class="tsd-signature tsd-kind-icon">booking_<wbr>date<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/FinTecSystems/xs2a-nodejs/blob/1cefb05/src/lib/models/turnover.ts#L12">lib/models/turnover.ts:12</a></li>
+							<li>Defined in <a href="https://github.com/FinTecSystems/xs2a-nodejs/blob/cde598b/src/lib/models/turnover.ts#L14">lib/models/turnover.ts:14</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -172,11 +152,11 @@
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="canceled" class="tsd-anchor"></a>
-					<h3>canceled</h3>
-					<div class="tsd-signature tsd-kind-icon">canceled<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> canceled</h3>
+					<div class="tsd-signature tsd-kind-icon">canceled<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/FinTecSystems/xs2a-nodejs/blob/1cefb05/src/lib/models/turnover.ts#L60">lib/models/turnover.ts:60</a></li>
+							<li>Defined in <a href="https://github.com/FinTecSystems/xs2a-nodejs/blob/cde598b/src/lib/models/turnover.ts#L62">lib/models/turnover.ts:62</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -192,11 +172,11 @@
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="category_id" class="tsd-anchor"></a>
-					<h3>category_<wbr>id</h3>
-					<div class="tsd-signature tsd-kind-icon">category_<wbr>id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> category_<wbr>id</h3>
+					<div class="tsd-signature tsd-kind-icon">category_<wbr>id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/FinTecSystems/xs2a-nodejs/blob/1cefb05/src/lib/models/turnover.ts#L72">lib/models/turnover.ts:72</a></li>
+							<li>Defined in <a href="https://github.com/FinTecSystems/xs2a-nodejs/blob/cde598b/src/lib/models/turnover.ts#L74">lib/models/turnover.ts:74</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -212,11 +192,11 @@
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="counter_bic" class="tsd-anchor"></a>
-					<h3>counter_<wbr>bic</h3>
-					<div class="tsd-signature tsd-kind-icon">counter_<wbr>bic<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> counter_<wbr>bic</h3>
+					<div class="tsd-signature tsd-kind-icon">counter_<wbr>bic<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/FinTecSystems/xs2a-nodejs/blob/1cefb05/src/lib/models/turnover.ts#L42">lib/models/turnover.ts:42</a></li>
+							<li>Defined in <a href="https://github.com/FinTecSystems/xs2a-nodejs/blob/cde598b/src/lib/models/turnover.ts#L44">lib/models/turnover.ts:44</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -232,11 +212,11 @@
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="counter_holder" class="tsd-anchor"></a>
-					<h3>counter_<wbr>holder</h3>
-					<div class="tsd-signature tsd-kind-icon">counter_<wbr>holder<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> counter_<wbr>holder</h3>
+					<div class="tsd-signature tsd-kind-icon">counter_<wbr>holder<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/FinTecSystems/xs2a-nodejs/blob/1cefb05/src/lib/models/turnover.ts#L48">lib/models/turnover.ts:48</a></li>
+							<li>Defined in <a href="https://github.com/FinTecSystems/xs2a-nodejs/blob/cde598b/src/lib/models/turnover.ts#L50">lib/models/turnover.ts:50</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -252,11 +232,11 @@
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="counter_iban" class="tsd-anchor"></a>
-					<h3>counter_<wbr>iban</h3>
-					<div class="tsd-signature tsd-kind-icon">counter_<wbr>iban<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> counter_<wbr>iban</h3>
+					<div class="tsd-signature tsd-kind-icon">counter_<wbr>iban<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/FinTecSystems/xs2a-nodejs/blob/1cefb05/src/lib/models/turnover.ts#L36">lib/models/turnover.ts:36</a></li>
+							<li>Defined in <a href="https://github.com/FinTecSystems/xs2a-nodejs/blob/cde598b/src/lib/models/turnover.ts#L38">lib/models/turnover.ts:38</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -272,11 +252,11 @@
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="creditor_id" class="tsd-anchor"></a>
-					<h3>creditor_<wbr>id</h3>
-					<div class="tsd-signature tsd-kind-icon">creditor_<wbr>id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> creditor_<wbr>id</h3>
+					<div class="tsd-signature tsd-kind-icon">creditor_<wbr>id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/FinTecSystems/xs2a-nodejs/blob/1cefb05/src/lib/models/turnover.ts#L78">lib/models/turnover.ts:78</a></li>
+							<li>Defined in <a href="https://github.com/FinTecSystems/xs2a-nodejs/blob/cde598b/src/lib/models/turnover.ts#L80">lib/models/turnover.ts:80</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -292,11 +272,11 @@
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="currency" class="tsd-anchor"></a>
-					<h3>currency</h3>
-					<div class="tsd-signature tsd-kind-icon">currency<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> currency</h3>
+					<div class="tsd-signature tsd-kind-icon">currency<span class="tsd-signature-symbol">:</span> <a href="../enums/currency.html" class="tsd-signature-type">Currency</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/FinTecSystems/xs2a-nodejs/blob/1cefb05/src/lib/models/turnover.ts#L24">lib/models/turnover.ts:24</a></li>
+							<li>Defined in <a href="https://github.com/FinTecSystems/xs2a-nodejs/blob/cde598b/src/lib/models/turnover.ts#L26">lib/models/turnover.ts:26</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -311,12 +291,32 @@
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="prebooked" class="tsd-anchor"></a>
-					<h3>prebooked</h3>
-					<div class="tsd-signature tsd-kind-icon">prebooked<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
+					<a name="new" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> new</h3>
+					<div class="tsd-signature tsd-kind-icon">new<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/FinTecSystems/xs2a-nodejs/blob/1cefb05/src/lib/models/turnover.ts#L54">lib/models/turnover.ts:54</a></li>
+							<li>Defined in <a href="https://github.com/FinTecSystems/xs2a-nodejs/blob/cde598b/src/lib/models/turnover.ts#L86">lib/models/turnover.ts:86</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>True, if this turnover is new since the last sync.</p>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt>memberof</dt>
+							<dd><p>Turnover</p>
+							</dd>
+						</dl>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="prebooked" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> prebooked</h3>
+					<div class="tsd-signature tsd-kind-icon">prebooked<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/FinTecSystems/xs2a-nodejs/blob/cde598b/src/lib/models/turnover.ts#L56">lib/models/turnover.ts:56</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -336,7 +336,7 @@
 					<div class="tsd-signature tsd-kind-icon">purpose<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/FinTecSystems/xs2a-nodejs/blob/1cefb05/src/lib/models/turnover.ts#L30">lib/models/turnover.ts:30</a></li>
+							<li>Defined in <a href="https://github.com/FinTecSystems/xs2a-nodejs/blob/cde598b/src/lib/models/turnover.ts#L32">lib/models/turnover.ts:32</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -352,11 +352,11 @@
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="tags" class="tsd-anchor"></a>
-					<h3>tags</h3>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> tags</h3>
 					<div class="tsd-signature tsd-kind-icon">tags<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/FinTecSystems/xs2a-nodejs/blob/1cefb05/src/lib/models/turnover.ts#L66">lib/models/turnover.ts:66</a></li>
+							<li>Defined in <a href="https://github.com/FinTecSystems/xs2a-nodejs/blob/cde598b/src/lib/models/turnover.ts#L68">lib/models/turnover.ts:68</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -388,9 +388,6 @@
 						<a href="turnover.html" class="tsd-kind-icon">Turnover</a>
 						<ul>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="turnover.html#_new" class="tsd-kind-icon">_new</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="turnover.html#amount" class="tsd-kind-icon">amount</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
@@ -416,6 +413,9 @@
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="turnover.html#currency" class="tsd-kind-icon">currency</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="turnover.html#new" class="tsd-kind-icon">new</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="turnover.html#prebooked" class="tsd-kind-icon">prebooked</a>
