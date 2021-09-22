@@ -13,7 +13,7 @@ export class SessionService {
 	public get(transactionId: string): Promise<WizardSessionObject> {
 		return new Promise((resolve, reject) => {
 			axios
-				.get(`/sessions/${transactionId}`)
+				.get(`/v1/sessions/${transactionId}`)
 				.then(response => {
 					resolve(response.data);
 				})

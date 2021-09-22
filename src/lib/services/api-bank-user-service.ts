@@ -13,7 +13,7 @@ export class BankUserService {
 	public list(perPage: number = 15, page: number = 1): Promise<BankUserList> {
 		return new Promise((resolve, reject) => {
 			axios
-				.get('/api/users', {
+				.get('/v1/api/users', {
 					params: {
 						page,
 						per_page: perPage,
@@ -36,7 +36,7 @@ export class BankUserService {
 	public create(request: BankUserRequest): Promise<BankUser> {
 		return new Promise((resolve, reject) => {
 			axios
-				.put('/api/users', request)
+				.put('/v1/api/users', request)
 				.then(response => {
 					resolve(response.data);
 				})
@@ -54,7 +54,7 @@ export class BankUserService {
 	public get(userId: string): Promise<BankUser> {
 		return new Promise((resolve, reject) => {
 			axios
-				.get(`/api/users/${userId}`)
+				.get(`/v1/api/users/${userId}`)
 				.then(response => {
 					resolve(response.data);
 				})
@@ -72,7 +72,7 @@ export class BankUserService {
 	public delete(userId: string): Promise<any> {
 		return new Promise((resolve, reject) => {
 			axios
-				.delete(`/api/users/${userId}`)
+				.delete(`/v1/api/users/${userId}`)
 				.then(response => {
 					resolve(response.data);
 				})
@@ -92,7 +92,7 @@ export class BankUserService {
 	public createAccessToken(userId: string, validUntil: string): Promise<BankUserAccessToken> {
 		return new Promise((resolve, reject) => {
 			axios
-				.put(`/api/users/${userId}/accesstokens`, {
+				.put(`/v1/api/users/${userId}/accesstokens`, {
 					valid_until: validUntil,
 				})
 				.then(response => {
@@ -112,7 +112,7 @@ export class BankUserService {
 	public listAccessTokens(userId: string): Promise<BankUserAccessTokenList> {
 		return new Promise((resolve, reject) => {
 			axios
-				.get(`/api/users/${userId}/accesstokens`)
+				.get(`/v1/api/users/${userId}/accesstokens`)
 				.then(response => {
 					resolve(response.data);
 				})
@@ -131,7 +131,7 @@ export class BankUserService {
 	public getAccessToken(userId: string, tokenId: string): Promise<BankUserAccessToken> {
 		return new Promise((resolve, reject) => {
 			axios
-				.get(`/api/users/${userId}/accesstokens/${tokenId}`)
+				.get(`/v1/api/users/${userId}/accesstokens/${tokenId}`)
 				.then(response => {
 					resolve(response.data);
 				})
@@ -151,7 +151,7 @@ export class BankUserService {
 	public refreshAccessToken(userId: string, tokenId: string, validUntil: string): Promise<BankUserAccessToken> {
 		return new Promise((resolve, reject) => {
 			axios
-				.patch(`/api/users/${userId}/accesstokens/${tokenId}`, {
+				.patch(`/v1/api/users/${userId}/accesstokens/${tokenId}`, {
 					valid_until: validUntil,
 				})
 				.then(response => {
@@ -172,7 +172,7 @@ export class BankUserService {
 	public deleteAccessToken(userId: string, tokenId: string): Promise<any> {
 		return new Promise((resolve, reject) => {
 			axios
-				.delete(`/api/users/${userId}/accesstokens/${tokenId}`)
+				.delete(`/v1/api/users/${userId}/accesstokens/${tokenId}`)
 				.then(response => {
 					resolve(response.data);
 				})

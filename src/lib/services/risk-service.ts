@@ -17,7 +17,7 @@ export class RiskService {
 	public create(request: RiskRequest = {}): Promise<SessionResponse> {
 		return new Promise((resolve, reject) => {
 			axios
-				.post('/risks', request)
+				.post('/v1/risks', request)
 				.then(response => {
 					resolve(response.data);
 				})
@@ -35,7 +35,7 @@ export class RiskService {
 	public get(transactionId: string): Promise<RiskObject> {
 		return new Promise((resolve, reject) => {
 			axios
-				.get(`/risks/${transactionId}`)
+				.get(`/v1/risks/${transactionId}`)
 				.then(response => {
 					resolve(response.data);
 				})
@@ -54,7 +54,7 @@ export class RiskService {
 	public getAccountSnapshot(transactionId: string, format: AccountSnapshotFormat = AccountSnapshotFormat.JSON2): Promise<AccountSnapshotJSON2> {
 		return new Promise((resolve, reject) => {
 			axios
-				.get(`/risks/${transactionId}/accountSnapshot`, { params: format })
+				.get(`/v1/risks/${transactionId}/accountSnapshot`, { params: format })
 				.then(response => {
 					resolve(response.data);
 				})
@@ -73,7 +73,7 @@ export class RiskService {
 	public getFullPDF(transactionId: string): Promise<any> {
 		return new Promise((resolve, reject) => {
 			axios
-				.get(`/risks/${transactionId}/fullpdf`)
+				.get(`/v1/risks/${transactionId}/fullpdf`)
 				.then(response => {
 					resolve(response.data);
 				})
@@ -126,7 +126,7 @@ export class RiskService {
 	public getEvents(transactionId: string, perPage: number = 15, page: number = 1): Promise<EventsList> {
 		return new Promise((resolve, reject) => {
 			axios
-				.get(`/risks/${transactionId}/events`, {
+				.get(`/v1/risks/${transactionId}/events`, {
 					params: {
 						page,
 						per_page: perPage,
@@ -153,7 +153,7 @@ export class RiskService {
 	public completeManually(wizardSessionId: string, format: UploadFormat = UploadFormat.JSON, body: Xs2aRiskUploadJsonWrapper[]): Promise<Xs2aRiskUploadJsonSuccess> {
 		return new Promise((resolve, reject) => {
 			axios
-				.post(`/risks/upload/${wizardSessionId}`, body, { params: format })
+				.post(`/v1/risks/upload/${wizardSessionId}`, body, { params: format })
 				.then(response => {
 					resolve(response.data);
 				})
@@ -171,7 +171,7 @@ export class RiskService {
 	public delete(transactionId: string): Promise<DeletionResponse> {
 		return new Promise((resolve, reject) => {
 			axios
-				.delete(`/risks/${transactionId}`)
+				.delete(`/v1/risks/${transactionId}`)
 				.then(response => {
 					resolve(response.data);
 				})
@@ -189,7 +189,7 @@ export class RiskService {
 	public list(parameters: RiskQueryParameters = {}): Promise<RisksTransactionList> {
 		return new Promise((resolve, reject) => {
 			axios
-				.get('/risks', { params: parameters })
+				.get('/v1/risks', { params: parameters })
 				.then(response => {
 					resolve(response.data);
 				})

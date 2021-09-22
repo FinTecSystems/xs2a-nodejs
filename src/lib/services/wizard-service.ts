@@ -12,7 +12,7 @@ export class WizardService {
 	public navigate(request: WizardApiRequest): Promise<WizardResponse | WizardFinalResponse> {
 		return new Promise((resolve, reject) => {
 			axios
-				.post('/wizard', request)
+				.post('/v1.1/wizard', request)
 				.then(response => {
 					resolve(response.data);
 				})

@@ -13,7 +13,7 @@ export class EventsService {
 	public getAll(parameters: EventsQueryParameters = {}): Promise<EventsList> {
 		return new Promise((resolve, reject) => {
 			axios
-				.get('/events', { params: parameters })
+				.get('/v1/events', { params: parameters })
 				.then(response => {
 					resolve(response.data);
 				})
@@ -31,7 +31,7 @@ export class EventsService {
 	public get(eventId: string): Promise<EventObject> {
 		return new Promise((resolve, reject) => {
 			axios
-				.get(`/events/${eventId}`)
+				.get(`/v1/events/${eventId}`)
 				.then(response => {
 					resolve(response.data);
 				})

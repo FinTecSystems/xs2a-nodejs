@@ -12,7 +12,7 @@ export class WhitelistService {
 	public add(entry: WhitelistAdd): Promise<WhitelistObject> {
 		return new Promise((resolve, reject) => {
 			axios
-				.post('/whitelist', entry)
+				.post('/v1/whitelist', entry)
 				.then(response => {
 					resolve(response.data);
 				})
@@ -30,7 +30,7 @@ export class WhitelistService {
 	public get(id: string): Promise<WhitelistObject> {
 		return new Promise((resolve, reject) => {
 			axios
-				.get(`/whitelist/${id}`)
+				.get(`/v1/whitelist/${id}`)
 				.then(response => {
 					resolve(response.data);
 				})
@@ -48,7 +48,7 @@ export class WhitelistService {
 	public delete(id: string): Promise<WhitelistObject> {
 		return new Promise((resolve, reject) => {
 			axios
-				.delete(`/whitelist/${id}`)
+				.delete(`/v1/whitelist/${id}`)
 				.then(response => {
 					resolve(response.data);
 				})

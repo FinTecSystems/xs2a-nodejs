@@ -14,7 +14,7 @@ export class BankAccountsService {
 	public list(perPage: number = 15, page: number = 1): Promise<BankAccountsList> {
 		return new Promise((resolve, reject) => {
 			axios
-				.get('/api/accounts', {
+				.get('/v1/api/accounts', {
 					params: {
 						page,
 						per_page: perPage,
@@ -39,7 +39,7 @@ export class BankAccountsService {
 	public listForBankConnection(connectionId: string, perPage: number = 15, page: number = 1): Promise<BankAccountsList> {
 		return new Promise((resolve, reject) => {
 			axios
-				.get(`/api/connections/${connectionId}/accounts`, {
+				.get(`/v1/api/connections/${connectionId}/accounts`, {
 					params: {
 						page,
 						per_page: perPage,
@@ -62,7 +62,7 @@ export class BankAccountsService {
 	public get(bankAccountId: string): Promise<BankAccount> {
 		return new Promise((resolve, reject) => {
 			axios
-				.get(`/api/accounts/${bankAccountId}`)
+				.get(`/v1/api/accounts/${bankAccountId}`)
 				.then(response => {
 					resolve(response.data);
 				})
@@ -80,7 +80,7 @@ export class BankAccountsService {
 	public delete(bankAccountId: string): Promise<any> {
 		return new Promise((resolve, reject) => {
 			axios
-				.delete(`/api/accounts/${bankAccountId}`)
+				.delete(`/v1/api/accounts/${bankAccountId}`)
 				.then(response => {
 					resolve(response.data);
 				})
@@ -98,7 +98,7 @@ export class BankAccountsService {
 	public getBalance(bankAccountId: string): Promise<BankAccountBalance> {
 		return new Promise((resolve, reject) => {
 			axios
-				.get(`/api/accounts/${bankAccountId}/balance`)
+				.get(`/v1/api/accounts/${bankAccountId}/balance`)
 				.then(response => {
 					resolve(response.data);
 				})
@@ -119,7 +119,7 @@ export class BankAccountsService {
 	public getTurnovers(bankAccountId: string, from: string = '', to: string = '', onlyNew: number = 0): Promise<BankAccountTurnovers> {
 		return new Promise((resolve, reject) => {
 			axios
-				.get(`/api/accounts/${bankAccountId}/turnovers`, {
+				.get(`/v1/api/accounts/${bankAccountId}/turnovers`, {
 					params: {
 						from,
 						only_new: onlyNew,
@@ -142,7 +142,7 @@ export class BankAccountsService {
 	 * @return {Promise<any>}
 	 */
 	public markTurnoversAsSeen(bankAccountId: string, upTo: string = ''): Promise<any> {
-		let path = `/api/accounts/${bankAccountId}/markAsSeen`
+		let path = `/v1/api/accounts/${bankAccountId}/markAsSeen`
 
 		if (upTo) {
 			path += `/${upTo}`
@@ -171,7 +171,7 @@ export class BankAccountsService {
 	public getReport(bankAccountId: string, reportId: string, format: ReportFormat = ReportFormat.JSON, locale: ReportLocale = ReportLocale.EN): Promise<any> {
 		return new Promise((resolve, reject) => {
 			axios
-				.get(`/api/accounts/${bankAccountId}/report/${reportId}`, {
+				.get(`/v1/api/accounts/${bankAccountId}/report/${reportId}`, {
 					params: {
 						format,
 						locale,

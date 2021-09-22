@@ -13,7 +13,7 @@ export class BankConnectionsService {
 	public create(request: BankConnectionRequest = {}): Promise<SessionResponse> {
 		return new Promise((resolve, reject) => {
 			axios
-				.put('/api/connections', request)
+				.put('/v1/api/connections', request)
 				.then(response => {
 					resolve(response.data);
 				})
@@ -32,7 +32,7 @@ export class BankConnectionsService {
 	public list(perPage: number = 15, page: number = 1): Promise<BankConnectionList> {
 		return new Promise((resolve, reject) => {
 			axios
-				.get('/api/connections', {
+				.get('/v1/api/connections', {
 					params: {
 						page,
 						per_page: perPage,
@@ -55,7 +55,7 @@ export class BankConnectionsService {
 	public get(connectionId: string): Promise<BankConnection> {
 		return new Promise((resolve, reject) => {
 			axios
-				.get(`/api/connections/${connectionId}`)
+				.get(`/v1/api/connections/${connectionId}`)
 				.then(response => {
 					resolve(response.data);
 				})
@@ -73,7 +73,7 @@ export class BankConnectionsService {
 	public delete(connectionId: string): Promise<any> {
 		return new Promise((resolve, reject) => {
 			axios
-				.delete(`/api/connections/${connectionId}`)
+				.delete(`/v1/api/connections/${connectionId}`)
 				.then(response => {
 					resolve(response.data);
 				})
@@ -93,7 +93,7 @@ export class BankConnectionsService {
 	public sync(connectionId: string, request: BankConnectionSyncRequest = {}): Promise<SessionResponse | null> {
 		return new Promise((resolve, reject) => {
 			axios
-				.post(`/api/connections/${connectionId}/sync`, request)
+				.post(`/v1/api/connections/${connectionId}/sync`, request)
 				.then(response => {
 					resolve(response.data);
 				})
@@ -111,7 +111,7 @@ export class BankConnectionsService {
 	public reset(connectionId: string): Promise<SessionResponse> {
 		return new Promise((resolve, reject) => {
 			axios
-				.post(`/api/connections/${connectionId}/reset`)
+				.post(`/v1/api/connections/${connectionId}/reset`)
 				.then(response => {
 					resolve(response.data);
 				})

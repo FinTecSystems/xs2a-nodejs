@@ -12,7 +12,7 @@ export class BlacklistService {
 	public add(entry: BlacklistAdd): Promise<BlacklistObject> {
 		return new Promise((resolve, reject) => {
 			axios
-				.post('/blacklist', entry)
+				.post('/v1/blacklist', entry)
 				.then(response => {
 					resolve(response.data);
 				})
@@ -30,7 +30,7 @@ export class BlacklistService {
 	public get(id: string): Promise<BlacklistObject> {
 		return new Promise((resolve, reject) => {
 			axios
-				.get(`/blacklist/${id}`)
+				.get(`/v1/blacklist/${id}`)
 				.then(response => {
 					resolve(response.data);
 				})
@@ -48,7 +48,7 @@ export class BlacklistService {
 	public delete(id: string): Promise<BlacklistObject> {
 		return new Promise((resolve, reject) => {
 			axios
-				.delete(`/blacklist/${id}`)
+				.delete(`/v1/blacklist/${id}`)
 				.then(response => {
 					resolve(response.data);
 				})

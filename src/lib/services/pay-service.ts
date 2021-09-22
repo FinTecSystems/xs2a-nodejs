@@ -16,7 +16,7 @@ export class PayService {
 	public create(request: PayRequest): Promise<SessionResponse> {
 		return new Promise((resolve, reject) => {
 			axios
-				.post('/payments', request)
+				.post('/v1/payments', request)
 				.then(response => {
 					resolve(response.data);
 				})
@@ -34,7 +34,7 @@ export class PayService {
 	public get(transactionId: string): Promise<PayObject> {
 		return new Promise((resolve, reject) => {
 			axios
-				.get(`/payments/${transactionId}`)
+				.get(`/v1/payments/${transactionId}`)
 				.then(response => {
 					resolve(response.data);
 				})
@@ -53,7 +53,7 @@ export class PayService {
 	public updatePaymentStatus(transactionId: string, statusToSet: PaymentStatus): Promise<PayObject> {
 		return new Promise((resolve, reject) => {
 			axios
-				.post(`/payments/${transactionId}/${statusToSet}`)
+				.post(`/v1/payments/${transactionId}/${statusToSet}`)
 				.then(response => {
 					resolve(response.data);
 				})
@@ -106,7 +106,7 @@ export class PayService {
 	public getEvents(transactionId: string, perPage: number = 15, page: number = 1): Promise<EventsList> {
 		return new Promise((resolve, reject) => {
 			axios
-				.get(`/payments/${transactionId}/events`, {
+				.get(`/v1/payments/${transactionId}/events`, {
 					params: {
 						page,
 						per_page: perPage,
@@ -131,7 +131,7 @@ export class PayService {
 	public generatePainFile(request: RefundPayoutRequest): Promise<RefundPayoutResponse> {
 		return new Promise((resolve, reject) => {
 			axios
-				.post('/payments/refundPayout', request)
+				.post('/v1/payments/refundPayout', request)
 				.then(response => {
 					resolve(response.data);
 				})
@@ -151,7 +151,7 @@ export class PayService {
 	public listRefundPayouts(perPage: number = 15, page: number = 1): Promise<RefundPayoutList> {
 		return new Promise((resolve, reject) => {
 			axios
-				.get('/payments/refundPayout', {
+				.get('/v1/payments/refundPayout', {
 					params: {
 						page,
 						per_page: perPage,
@@ -174,7 +174,7 @@ export class PayService {
 	public getRefundPayout(transactionId: string): Promise<RefundsPayout> {
 		return new Promise((resolve, reject) => {
 			axios
-				.get(`/payments/${transactionId}/refundPayout`)
+				.get(`/v1/payments/${transactionId}/refundPayout`)
 				.then(response => {
 					resolve(response.data);
 				})
@@ -192,7 +192,7 @@ export class PayService {
 	public getPainFile(messageId: string): Promise<any> {
 		return new Promise((resolve, reject) => {
 			axios
-				.get(`/payments/refundPayout/${messageId}`)
+				.get(`/v1/payments/refundPayout/${messageId}`)
 				.then(response => {
 					resolve(response.data);
 				})
@@ -211,7 +211,7 @@ export class PayService {
 	public delete(transactionId: string): Promise<DeletionResponse> {
 		return new Promise((resolve, reject) => {
 			axios
-				.delete(`/payments/${transactionId}`)
+				.delete(`/v1/payments/${transactionId}`)
 				.then(response => {
 					resolve(response.data);
 				})
@@ -229,7 +229,7 @@ export class PayService {
 	public list(parameters: PayQueryParameters = {}): Promise<PaymentsTransactionList> {
 		return new Promise((resolve, reject) => {
 			axios
-				.get('/payments', { params: parameters })
+				.get('/v1/payments', { params: parameters })
 				.then(response => {
 					resolve(response.data);
 				})
