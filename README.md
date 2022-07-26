@@ -1,10 +1,10 @@
 # XS2A Node.js
 
-The official Node.js API wrapper for the FinTecSystems XS2A API. Written in Typescript with intellisense support and autocompletion.
+The official Node.js API wrapper for the Tink Germany XS2A API. Written in Typescript with intellisense support and autocompletion.
 
-- [Documentation (Typedocs)](https://docs.fintecsystems.com/xs2a-nodejs)
-- [Full REST-API Reference](https://docs.fintecsystems.com/swagger)
-- [Get an API-Key](https://fintecsystems.com/en/developer/)
+- [Documentation (Typedocs)](https://docs.xs2a.com/xs2a-nodejs)
+- [Full REST-API Reference](https://docs.xs2a.com/swagger)
+- [Get an API-Key](https://developer.xs2a.com/)
 
 ### Get Started
 
